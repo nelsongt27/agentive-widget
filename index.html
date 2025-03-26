@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Agente Conversacional</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        #widget-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="widget-container"></div>
+    <script type="text/javascript">
+        (function(d, t) {
+            var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            v.onload = function() {
+                if (!document.getElementById('root')) {
+                    var div = d.createElement('div');
+                    div.id = 'root';
+                    d.body.appendChild(div);
+                }
+                if (window.myChatWidget && typeof window.myChatWidget.load === 'function') {
+                    window.myChatWidget.load({
+                        id: 'caa7bcf5-ed97-4b2e-b7f4-f0870c0f188d',
+                    });
+                }
+            };
+            v.src = "https://agentivehub.com/production.bundle.min.js";
+            v.type = "text/javascript";
+            s.parentNode.insertBefore(v, s);
+        })(document, 'script');
+    </script>
+</body>
+</html>
